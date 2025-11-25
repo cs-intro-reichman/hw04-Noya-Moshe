@@ -93,21 +93,24 @@ public class ArrCharOps {
     */
     public static char[] concat(char[] arr1, char[] arr2) {
         // Replace the following statement with your code
+         if (arr1 == null) arr1 = new char[0];
+         if (arr2 == null) arr2 = new char[0];
+
         char[] arr = new char[arr1.length + arr2.length];
         int index = 0;
-        if(arr1.length != 0 && arr2.length != 0){
+        
             for(int i = 0; i < arr1.length; i++){
-                arr[index] = arr1[i];
-                index++;
+                arr[index++] = arr1[i];
+               
             }
             for (int i = 0; i < arr2.length; i++){
-                arr[index] = arr2[i];
-                index++;
+                arr[index++] = arr2[i];
+                
             }
             return arr;
         }
-        return null;
-    } 
+    
+    
 
 
     /** Returns a new array that can be described as a sub-array of this array.
