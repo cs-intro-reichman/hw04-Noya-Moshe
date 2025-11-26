@@ -22,5 +22,17 @@ public class KeywordsDetector {
     // If a sentence contains one or more of the kewords, prints it.
     public static void detectAndPrint(String[] sentences, String[] keywords) {
         // Replace this comment with your code
+        for(int i = 0; i < sentences.length; i++){ // אני עוברת על כל משפט בנפרד
+              String sentenceLower = sentences[i].toLowerCase(); // הופכת לאותיות קטנות
+           
+            for(int j = 0; j < keywords.length; j++){ // עוברת על כל המילות מפתח 
+                String keywordLower = keywords[j].toLowerCase();
+                     if(sentenceLower.indexOf(keywordLower) != -1){ //בודקת תנאי האם קיים keywords במילה
+                        
+                        System.out.println(sentences[i]);
+                        break;
+              }  
+            }
+        }
     }
 }
